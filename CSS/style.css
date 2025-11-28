@@ -1,0 +1,41 @@
+body {
+  background: #f5f7fa;
+  font-family: "Inter", Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+#itemList li {
+  background: white;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#camera-view {
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+#camera-output-container img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+}
+
+#camera-output-container img:hover {
+  transform: scale(1.05);
+}

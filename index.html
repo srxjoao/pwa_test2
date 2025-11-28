@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Minhas Plantas</title>
+
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="/images/icon-256_ios.png" />
+    <link rel="icon" href="/images/camera_256.png" sizes="256x256" />
+
+    <meta name="theme-color" content="white" />
+  </head>
+  <body>
+    <h1>Minhas Plantas</h1>
+
+    <div class="container">
+      <div class="mb-3">
+        <input
+          type="text"
+          id="itemInput"
+          class="form-control"
+          placeholder="Digite a legenda da planta"
+        />
+      </div>
+
+      <button id="addItem" class="btn btn-success w-100 mb-4">Adicionar</button>
+
+      <ul id="itemList" class="list-unstyled"></ul>
+
+      <main id="camera" class="text-center mt-4">
+        <video
+          id="camera-view"
+          autoplay
+          playsinline
+          width="300"
+          height="200"
+        ></video>
+        <canvas id="camera-sensor" style="display: none"></canvas>
+
+        <div class="mt-3">
+          <button id="cameraButton">
+            Abrir Câmera
+          </button>
+          <button id="captureButton" class="btn btn-warning">Tirar Foto</button>
+        </div>
+      </main>
+
+      <div
+        id="camera-output-container"
+        class="d-flex flex-wrap gap-2 mt-4"
+      ></div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/bd.js" type="module"></script>
+  </body>
+</html>

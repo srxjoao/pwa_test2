@@ -1,0 +1,20 @@
+{
+  "name": "Foto de Plantas",
+  "short_name": "GreenCam",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#222222",
+  "icons": [
+    {
+      "src": "images/icon-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "images/camera_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
