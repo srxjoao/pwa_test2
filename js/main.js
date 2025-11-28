@@ -25,16 +25,22 @@ document.addEventListener("DOMContentLoaded", () => {
     let shoppingList = JSON.parse(localStorage.getItem("shoppingList")) || [];
 
     // Configurar câmera
-    function cameraStart() {
-        navigator.mediaDevices
-            .getUserMedia({ video: { facingMode: "environment" }, audio: false })
-            .then(stream => {
-                cameraView.srcObject = stream;
-            })
-            .catch(error => {
-                console.error("Erro ao acessar a câmera:", error);
-            });
+async function cameraStart() {
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({
+            video: {
+                facingMode: { ideal: "environment" }
+            },
+            audio: false
+        });
+
+        cameraView.srcObject = stream;
+    } catch (error) {
+        console.error("Erro ao acessar a câmera:", error);
+        alert("Não foi possível acessar a câmera. Verifique permissões.");
     }
+}
+
 
     // Capturar imagem
     function capturarImagem() {
